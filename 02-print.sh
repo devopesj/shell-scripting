@@ -33,3 +33,14 @@ echo -e "\e[31mWARNING!! There is an error!!!!!"
 
 echo -e "\e[35mBye"
 
+# Color enabling will not be disabled by default, When we enable color the it is needed to disable the color also.
+
+# To disable color we have one more color code which is zero, like we have more
+
+#   Code      Purpose
+#   0         reset the color
+#   1         Bold the text
+#   4         Underline the text
+
+echo -e "\e0m[Normal Colour Text"
+
