@@ -29,5 +29,5 @@ echo -e "Hello,\n\nWelcome to Devops"
 #   Magenta       35
 #   Cyan          36
 
-echo -e "e\[31mWARNING!! There is an error!!!!!"
+echo -e "\e[31mWARNING!! There is an error!!!!!"
 
