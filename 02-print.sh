@@ -31,3 +31,5 @@ echo -e "Hello,\n\nWelcome to Devops"
 
 echo -e "\e[31mWARNING!! There is an error!!!!!"
 
+echo -e "\e[35mBye"
+
