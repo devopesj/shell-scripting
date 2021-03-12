@@ -23,3 +23,5 @@ FILE2=mew.txt
 
 # If your data has spaces then you have to use quotes
 NAME="Welcome to DevOps"
+
+echo "Count of Apples = $COUNTno"
