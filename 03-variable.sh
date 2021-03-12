@@ -20,3 +20,6 @@ FILE1=sample.txt
 FILE2=mew.txt
 
 #cp $FILE1 $FILE2
+
+# If your data has spaces then you have to use quotes
+NAME="Welcome to DevOps"
