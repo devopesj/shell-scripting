@@ -42,5 +42,17 @@ echo -e "\e[35mBye"
 #   1         Bold the text
 #   4         Underline the text
 
-echo -e "\e0m[Normal Colour Text"
+# https://misc.flogisoft.com/bash/tip_colors_and_formatting
+
+# Now we have to print a mesage with color and with properties like (bold, underline)
+
+# echo -e "\e[PROP-COL-CODE;COL-CODEmMESSAGE"
+
+# To disable the color which is enabled then
+
+# echo -e "e\[COL-CODEmMESSAGE\e[0m"
+
+echo -e "\e[1;31mWARNING!! THere is an error\e[0m"
+
+echo Bye
 
