@@ -13,4 +13,4 @@ echo Welcome to Devops
 ##When we user ESC seq, Input to echo command should be given in double quotes (single quotes can also be used but preferred is double quotes)
 # Also ESC seq works when you enable -e option to echo the command
 
-echo -e "Hello,\nWelcome to Devops"
+echo -e "Hello,\n\nWelcome to Devops"
