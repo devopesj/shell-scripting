@@ -24,3 +24,18 @@ Bash is default in all enterprise Linux OS (redhat, ubuntu, suse)
 In Redhat, sh and bash are the same.
 
 That's why even for bash we are giving an extension of .sh
+
+
+_____________
+
+Scripts can be exectued wit hthe interpreter directly
+
+sh 02-print.sh 
+
+NOTE: Assume the script has a she-bang and the above method of executing the script will override the she-bangs interpreter
+
+or we can provide executable permission and then execute it
+chmond ugo+x 02-print.sh
+chmod +x 02-print.sh
+
+./02-print.sh
