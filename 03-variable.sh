@@ -51,4 +51,4 @@ echo ADD = $ADD
 
 echo "Value of a = $A"
 
-echo "Value of calc = $A"
+echo "Value of calc = $CALC"
