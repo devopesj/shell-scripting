@@ -25,3 +25,30 @@ FILE2=mew.txt
 NAME="Welcome to DevOps"
 
 echo "Count of Apples = ${COUNT}no"
+
+# ----------------------
+
+# Sometimes we need variable data dynamically
+
+## Ex:
+
+echo "Welcome, Good Morning, Today date is 2021-02-08"
+
+# Above statement makes it wrong because of static date
+
+# Command Substitution
+# VAR=$(COMMAND)
+
+DATE=$(date +%F)
+echo "Welcome, Good Morning, Today date is $DATE"
+
+## Arithmetic Substitution
+
+ADD=$((2+3+4+5+6))
+CALC=$((2+3-4*5+6*2/7))
+
+echo ADD = $ADD
+
+echo "Value of a = $A"
+
+echo "Value of calc = $A"
