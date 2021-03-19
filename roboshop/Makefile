@@ -19,8 +19,8 @@ user: common
 cart: common
 	@sh components/cart.sh
 
-catalogue: common
-	@sudo sh components/catalogue.sh
+mysql: common
+	@sudo sh components/mysql.sh
 
 shipping: common
 	@sudo sh components/shipping.sh
