@@ -4,10 +4,10 @@ COMPONENT=frontend
 
 source components/common.sh
 
-Print "\e[34mInstalling Nginx\e[0m"
-yum install nginx -y
+Print "\e[34mInstalling Nginx\e[0m" "yum install nginx -y"
+#yum install nginx -y
 
-Print  "\e[33mEnabling and Starting Nginx\e[0m"
+Print  "\e[33mEnabling and Starting Nginx\e[0m" "systemctl start nginx"
 exit
 systemctl enable nginx
 systemctl start nginx

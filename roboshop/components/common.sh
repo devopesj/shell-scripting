@@ -11,6 +11,15 @@ if [ "$USER_ID" -ne 0 ]; then
   exit 1
 fi
 
+#Linux OS Based
+#Print() {
+ # echo -e "\e[1m $(date +%c) \e[35m$(hostname)\e[0m \e[1;36m${COMPONENT}\e[0m :: $1"
+#}
+
+
 Print() {
-  echo -e "\e[1m $(date +%c) \e[35m$(hostname)\e[0m \e[1;36m${COMPONENT}\e[0m :: $1"
+  echo -e "[INFO]-------------------< $1 >-----------------------"
+  echo -e "[INFO]\e[1m $2 \e[0m"
+  echo -e "[INFO]-\e[;
+    34mINFO\e[0m]-------------------------------------------------"
 }
