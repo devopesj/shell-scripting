@@ -3,7 +3,7 @@
 echo -e "\e[34mDownloading Nginx"
 yum install nginx -y
 
-echo -e "\e[34mEnabling and Starting Nginx"
+echo -e "\e[33mEnabling and Starting Nginx"
 systemctl enable nginx
 systemctl start nginx
 
