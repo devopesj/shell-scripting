@@ -1,32 +1,32 @@
 common:
 	@sh components/common.sh
 
-frontend:
+frontend: common
 	@sudo sh components/frontend.sh
 
-mongo:
+mongo: common
 	@sudo sh components/mongo.sh
 
-catalogue:
+catalogue: common
 	@sudo sh components/catalogue.sh
 
-redis:
+redis: common
 	@sudo sh components/redis.sh
 
-user:
+user: common
 	@sudo sh components/user.sh
 
-cart:
+cart: common
 	@sudo sh components/cart.sh
 
-catalogue:
+catalogue: common
 	@sudo sh components/catalogue.sh
 
-shipping:
+shipping: common
 	@sudo sh components/shipping.sh
 
-rabbitmq:
+rabbitmq: common
 	@sudo sh components/rabbitmq.sh
 
-payment:
+payment: common
 	@sh compoennts/payment.sh
