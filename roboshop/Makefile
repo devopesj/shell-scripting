@@ -8,7 +8,7 @@ mongo: common
 	@sudo sh components/mongo.sh
 
 catalogue: common
-	@sudo sh components/catalogue.sh
+	@sh components/catalogue.sh
 
 redis: common
 	@sudo sh components/redis.sh
@@ -17,7 +17,7 @@ user: common
 	@sudo sh components/user.sh
 
 cart: common
-	@sudo sh components/cart.sh
+	@sh components/cart.sh
 
 catalogue: common
 	@sudo sh components/catalogue.sh
