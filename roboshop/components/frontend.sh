@@ -9,7 +9,6 @@ yum install nginx -y &>/tmp/log
 Stat $?
 
 Print  "\e[33mEnabling and Starting Nginx\e[0m" "systemctl start nginx"
-exit
 systemctl enable nginx
 systemctl start nginx
 
