@@ -6,4 +6,6 @@ fi
 
 if [ -z "$a"]; then
   echo Variables a is empty
+else
+  echo Variable a is not empty. It is "${a}".
 fi
