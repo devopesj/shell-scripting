@@ -13,8 +13,10 @@ exit
 systemctl enable nginx
 systemctl start nginx
 
-Print "\e[36mDownloading fronend zip file\e[0m"
+Print "\e[36mDownloading fronend zip file\e[0m" "curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip""
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+Stat $?
+
 cd /usr/share/nginx/html
 rm -rf *
 unzip /tmp/frontend.zip
