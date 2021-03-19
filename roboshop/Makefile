@@ -1,5 +1,5 @@
 common:
-	@sudo sh components/cart.sh
+	@sh components/common.sh
 
 frontend:
 	@sudo sh components/frontend.sh
