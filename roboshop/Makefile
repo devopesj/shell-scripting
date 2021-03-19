@@ -1,5 +1,17 @@
-cart:
-	@sh components/cart.sh
+common:
+	@sudo sh components/cart.sh
+
+frontend:
+	@sudo sh components/frontend.sh
+
+mongo:
+	@sudo sh components/cart.sh
 
 catalogue:
-	@sh components/catalogue.sh
+	@sudo sh components/catalogue.sh
+
+cart:
+	@sudo sh components/cart.sh
+
+catalogue:
+	@sudo sh components/catalogue.sh
