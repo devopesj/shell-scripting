@@ -7,7 +7,7 @@ if [ -z "${component}" ]; then
   exit 1
 fi
 
-STATE=${ aws ec2 describe-instances --filters "Name=tag:Name,Values=${component}" --query 'Reservations[*].Instances[*].State.Name' --output text}
+STATE=$( aws ec2 describe-instances --filters "Name=tag:Name,Values=${component}" --query 'Reservations[*].Instances[*].State.Name' --output text)
 
 if [ $STATE != "running" ]; then
   aws ec2 run-instances --launch-template LaunchTemplateId=lt-083666db45a13df5f --tag-specifications "ResourceType=instance,Tags=[{Key=Name,
