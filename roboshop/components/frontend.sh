@@ -16,13 +16,20 @@ Print "\e[36mDownloading fronend zip file\e[0m" "curl -s -L -o /tmp/frontend.zip
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 Stat $?
 
+Print "Remove Old Docs" "cd /usr/share/nginx/html ;rm -rf *"
 cd /usr/share/nginx/html
 rm -rf *
-unzip /tmp/frontend.zip
-mv frontend-main/* .
-mv static/* .
-rm -rf frontend-master README.md
-mv localhost.conf /etc/nginx/default.d/roboshop.conf
+Stat $?
 
-Print "\e[35mRestaeting ngninx\e[0m"
+Print "Extract RoboShop Frontend Docs" "unzip /tmp/frontend.zip"
+unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* . && rm -rf static README.md frontend-main
+Stat $?
+
+Print "Setup Nginx Config for RoboShop" "mv localhost.conf /etc/nginx/default.d/roboshop.conf"
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+Stat $?
+
+Print "Starting Nginx Service" "systemctl start nginx"
+systemctl enable nginx
 systemctl restart nginx
+Stat $?

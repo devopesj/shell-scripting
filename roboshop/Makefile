@@ -1,32 +1,85 @@
+#help:
+#	@printf "\033[32mERoboshop Shell Scripting v$(version)\033[0m\n\n"
+#	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+#
+#common:
+#	@sh components/common.sh
+#.PHONY: frontend
+#frontend: common		##Install frontend component
+#	@sudo sh components/frontend.sh
+#
+#mongodb: common			##Install mongodb component
+#	@sudo sh components/mongo.sh
+#
+#catalogue: common		##Install catalogue component
+#	@sh components/catalogue.sh
+#
+#redis: common
+#	@sudo sh components/redis.sh
+#
+#user: common
+#	@sudo sh components/user.sh
+#
+#cart: common
+#	@sh components/cart.sh
+#
+#mysql: common
+#	@sudo sh components/mysql.sh
+#
+#shipping: common
+#	@sudo sh components/shipping.sh
+#
+#rabbitmq: common
+#	@sudo sh components/rabbitmq.sh
+#
+#payment: common
+#	@sh compoennts/payment.sh
+
+# Add the following 'help' target to your Makefile
+# And add help text after each target name starting with '\#\#'
+
+help:
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+
 common:
 	@sh components/common.sh
 
-frontend: common
-	@sudo sh components/frontend.sh
-
-mongo: common
-	@sudo sh components/mongo.sh
-
-catalogue: common
-	@sh components/catalogue.sh
-
-redis: common
-	@sudo sh components/redis.sh
-
-user: common
-	@sudo sh components/user.sh
-
 cart: common
+cart:				## Install Cart Component
 	@sh components/cart.sh
 
+catalogue: common
+catalogue:			## Install Catalogue Component
+	@sh components/catalogue.sh
+
+frontend: common
+frontend:			## Install Frontend Component
+	@sh components/frontend.sh
+
+mongodb: common
+mongodb:			## Install Frontend Component
+	@sh components/mongodb.sh
+
+redis: common
+redis:			## Install Frontend Component
+	@sh components/redis.sh
+
+user: common
+user:			## Install Frontend Component
+	@sh components/user.sh
+
 mysql: common
-	@sudo sh components/mysql.sh
+mysql:			## Install Frontend Component
+	@sh components/mysql.sh
 
 shipping: common
-	@sudo sh components/shipping.sh
+shipping:			## Install Frontend Component
+	@sh components/shipping.sh
 
 rabbitmq: common
-	@sudo sh components/rabbitmq.sh
+rabbitmq:			## Install Frontend Component
+	@sh components/rabbitmq.sh
 
 payment: common
-	@sh compoennts/payment.sh
+payment:			## Install Frontend Component
+	@sh components/payment.sh
