@@ -6,6 +6,6 @@
       "Name": "${component}.samdevops.tk",
       "Type": "A",
       "TTL": 300,
-      "ResourceRecords": [{ "Value": "4.4.4.4"}]
+      "ResourceRecords": [{ "Value": "${IPADDRESS}"}]
     }}]
 }
