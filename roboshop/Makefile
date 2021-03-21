@@ -9,7 +9,7 @@
 #	@sudo sh components/frontend.sh
 #
 #mongodb: common			##Install mongodb component
-#	@sudo sh components/mongo.sh
+#	@sudo sh components/mongodb.sh
 #
 #catalogue: common		##Install catalogue component
 #	@sh components/catalogue.sh
