@@ -13,7 +13,7 @@ yum-config-manager --enable remi && yum install redis -y
 Stat $?
 
 Print "Update Redis Config" "sed -i -e 's/127.0.0.1/0.0.0.0/ /etc/redis.conf"
-sed -i -e 's/127.0.0.1/0.0.0.0/ /etc/redis.conf'
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf
 Stat $?
 
 Print "Start Redis Database"
