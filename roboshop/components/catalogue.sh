@@ -25,7 +25,7 @@ npm install --unsafe perm
 Stat $?
 
 Print "Update SystemD Script for Catalogue"
-sed -i -e 's/MONGO_DNSNAME/mongodb-ss.samdevops.tk' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+sed -i -e 's/MONGO_DNSNAME/mongodb-ss.samdevops.tk/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 Stat $?
 
 Print "lets set up the service with systemctl" "Start Catalogue" "systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue"
