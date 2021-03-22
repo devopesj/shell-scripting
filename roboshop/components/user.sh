@@ -26,8 +26,8 @@ Stat $?
 
 chown roboshop:roboshop /home/roboshop -R
 
-Print "Update SystemD Script for user" "s/MONGO_DNSNAME/mongodb-ss.devopsb54.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service"
-sed -i -e 's/MONGO_ENDPOINT/mongodb-ss.devopsb54.tk/' -e 's/REDIS_ENDPOINT/redis-ss.devopsb54.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service
+Print "Update SystemD Script for user" "s/MONGO_DNSNAME/mongodb-ss.samdevopsb.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service"
+sed -i -e 's/MONGO_ENDPOINT/mongodb-ss.samdevops.tk/' -e 's/REDIS_ENDPOINT/redis-ss.samdevopsb.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service
 Stat $?
 
 Print "Start user Service" "systemctl daemon-reload && systemctl restart user && systemctl enable user"
