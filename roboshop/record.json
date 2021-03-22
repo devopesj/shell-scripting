@@ -1,7 +1,7 @@
 {
   "Comment": "CREATE/DELETE/UPSERT a record ",
   "Changes": [{
-    "Action": "UPSERT",
+    "Action": "CREATE",
     "ResourceRecordSet": {
       "Name": "${component}-ss.samdevops.tk",
       "Type": "A",
