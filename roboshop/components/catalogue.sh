@@ -2,7 +2,7 @@
 
 COMPONENT=catalogue
 
-source components/catalogue.sh
+source components/common.sh
 
 Print "\e[34mInstalling Nodejs\e[0m" "yum install nginx -y"
 yum install nodejs make gcc-c++ -y
