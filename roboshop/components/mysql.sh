@@ -27,10 +27,10 @@ if [ $? -ne 0 ]; then
   Stat $?
 
   Print "Reset MySQL Password" "mysql -u root -p"
-  mysql -u root -p"${DEFAULT_PASSWORD}" <<EOF
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'Default_Roboshop*999';
-uninstall plugin validate_password;
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+  mysql --connect-expired-password -uroot -p"${DEFAULT_PASSWORD}" <<EOF
+  ALTER USER 'root'@'localhost' IDENTIFIED BY 'Default_RoboShop*999';
+  uninstall plugin validate_password;
+  ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 EOF
   Stat$?
 fi
