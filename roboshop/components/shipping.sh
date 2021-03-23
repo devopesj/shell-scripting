@@ -2,7 +2,7 @@
 
 COMPONENT=shipping
 
-source components/common.sh
+source components/commoni.sh
 
 Print "Install Maven"
 yum install maven -y
@@ -18,7 +18,7 @@ curl -s -L -o /tmp/shipping.zip "https://github.com/roboshop-devops-project/ship
 Stat $?
 
 Print "Extract shipping code"
-rm -rf /home/roboshop/shipping && cd /home/roboshop/shipping && unzip /tmp/shipping.zip  && mv shipping-main shipping && cd shipping
+rm -rf /home/roboshop/shipping && cd /home/roboshop && unzip /tmp/shipping.zip && mv shipping-main shipping && cd shipping
 Stat $?
 
 Print "Maven Compile Code"
