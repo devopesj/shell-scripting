@@ -2,7 +2,7 @@
 
 COMPONENT=shipping
 
-source components/commoni.sh
+source components/common.sh
 
 Print "Install Maven"
 yum install maven -y
