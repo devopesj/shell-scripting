@@ -15,18 +15,16 @@ Stat $?
 
 Print "Installing and starting MongoDB"
 yum install -y mongodb-org
-systemctl enable mongod
-systemctl start mongod
 Stat $?
 
 Print "Update MongoDB Config" "sed"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 Stat $?
 
-Print "Restart MongoDB service"
+Print "Start MongoDB service"
 systemctl restart mongod
-Every Database needs the schema to be loaded for the application to work.
-Download the schema and load it.
+systemctl enable mongod
+Stat$?
 
 Print "Download MongoDB Schema" '"curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"'
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
