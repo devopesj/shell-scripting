@@ -4,11 +4,12 @@ COMPONENT=frontend
 
 source components/common.sh
 
-Print "\e[34mInstalling Nginx\e[0m" "yum install nginx -y"
-yum install nginx -y &>/tmp/log
+Print "Installing Nginx" "yum install nginx -y"
+yum install nginx -y
 Stat $?
 
-Print "\e[36mDownloading fronend zip file\e[0m" "curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip""
+Print "Downloading Frontend Content" 'curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"'
+
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 Stat $?
 

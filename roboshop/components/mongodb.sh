@@ -15,6 +15,8 @@ Stat $?
 
 Print "Installing MongoDB" "yum install -y mongodb-org"
 yum install -y mongodb-org
+systemctl enable mongod
+systemctl start mongod
 Stat $?
 
 Print "Update Mongo DB Config" "sed"
