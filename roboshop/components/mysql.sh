@@ -43,5 +43,5 @@ Print "Load Schema"
 cd /tmp
 unzip mysql.zip
 cd mysql-main
-mysql -u -root -ppasswprd <shipping.sql
+mysql -u -root -ppassword <shipping.sql
 Stat$?
