@@ -9,7 +9,7 @@ yum install nodejs make gcc-c++ -y
 Stat $?
 
 Print "Adding RoboShop Project User" "useradd roboshop"
-id roboshop || useradd roboshop
+id roboshop || useradd roboshopsystemctl
 Stat $?
 
 Print "Download User Component Code" 'curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip"'
@@ -18,7 +18,7 @@ curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/arc
 Stat $?
 
 Print  "Extract user Component Code" "rm -rf /home/roboshop/user && cd /home/roboshop && unzip /tmp/user.zip && mv /home/roboshop/user-main /home/roboshop/user && cd /home/roboshop/user"
-rm -rf /home/roboshop/user && cd /home/roboshop && unzip /tmp/user.zip && mv /home/roboshop/user-main /home/roboshop/user && cd /home/roboshop/user
+rm -rf /home/roboshop/user && cd /home/roboshop && unzip /tmp/user.zip && mv user-main user && cd /home/roboshop/user
 Stat $?
 
 Print "Install NOdeJS Dependencies" "npm install"
