@@ -57,29 +57,29 @@ frontend:			## Install Frontend Component
 	@sh components/frontend.sh
 
 mongodb: common
-mongodb:			## Install Frontend Component
+mongodb:			## Install MongoDB Component
 	@sh components/mongodb.sh
 
 redis: common
-redis:			## Install Frontend Component
+redis:			## Install Redis Component
 	@sh components/redis.sh
 
 user: common
-user:			## Install Frontend Component
+user:			## Install User Component
 	@sh components/user.sh
 
 mysql: common
-mysql:			## Install Frontend Component
+mysql:			## Install MySQL Component
 	@sh components/mysql.sh
 
 shipping: common
-shipping:			## Install Frontend Component
+shipping:			## Install Shippinf Component
 	@sh components/shipping.sh
 
 rabbitmq: common
-rabbitmq:			## Install Frontend Component
+rabbitmq:			## Install RabbitMQ Component
 	@sh components/rabbitmq.sh
 
 payment: common
-payment:			## Install Frontend Component
+payment:			## Install Payment Component
 	@sh components/payment.sh
