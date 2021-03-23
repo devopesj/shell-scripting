@@ -28,7 +28,7 @@ systemctl restart mongod
 Every Database needs the schema to be loaded for the application to work.
 Download the schema and load it.
 
-Print "Download MongoDB Schema" "curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip""
+Print "Download MongoDB Schema" '"curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"'
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
 Stat $?
 
