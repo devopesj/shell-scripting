@@ -25,18 +25,17 @@ Print "Installing Python Dependencies"
 cd /home/roboshop/payment && pip3 install -r requirements.txt
 Stat $?
 
-Print "Update User details" "USER_ID=$(id -u roboshop)
-GROUP_ID=$(id -g roboshop)
-sed -i -e "/^uid/ c uid=$(USER_ID)" -e "/^gid/ c gid=$(GROUP_ID)" /home/roboshop/payment/payment.ini"
+Print "Update User details" "USER_ID=${id-u roboshop} GROUP_ID=$(id -g roboshop)
+sed -i -e "/^uid/ c uid=${USER_ID}" -e "/^gid/ c gid=${GROUP_ID}" /home/roboshop/payment/payment.ini"
 USER_ID=$(id -u roboshop)
 GROUP_ID=$(id -g roboshop)
-sed -i -e "/^uid/ c uid=$(USER_ID)" -e "/^gid/ c gid=$(GROUP_ID)" /home/roboshop/payment/payment.ini
+sed -i -e "/^uid/ c uid=${USER_ID}" -e "/^gid/ c gid=${GROUP_ID}" /home/roboshop/payment/payment.ini
 
 Print "Update SystemD Script for Payment"
 CARTHOST=$(cart-ss.samdevops.tk)
 USERHOST=$(user-ss.samdevops.tk)
 AMQPHOST=$(rabbitmq-ss.samdevops.tk)
-sed -i -e "s/CARTHOST/$(CARTHOST)" -e "s/USERHOST/$(USERHOST)" -e "s/AMQPHOST/$(AMQPHOST)"
+sed -i -e "s/CARTHOST/${CARTHOST}" -e "s/USERHOST/${USERHOST}" -e "s/AMQPHOST/${AMQPHOST}"
 Stat $?
 
 Print "mv /home/roboshop/payment/systemd.service /etc/systemd/system/payment.service && systemctl daemon-reload && systemctl enable payment && systemctl start payment"
