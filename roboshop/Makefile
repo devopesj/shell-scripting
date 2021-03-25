@@ -56,6 +56,22 @@ frontend: common
 frontend:			## Install Frontend Component
 	@sh components/frontend.sh
 
+frontend-cart: common
+frontend-cart:			## Update Frontend Cart Services
+	@sh components/frontend-cart.sh
+
+frontend-catalogue: common
+frontend-catalogue:			## Update Frontend Catalogue Services
+	@sh components/frontend-catalogue.sh
+
+frontend-payment: common
+frontend-payment:			## Update Frontend Payment Services
+	@sh components/frontend-payment.sh
+
+frontend-shipping: common
+frontend-shipping:			## Update Frontend Shipping Services
+	@sh components/frontend-shipping.sh
+
 mongodb: common
 mongodb:			## Install MongoDB Component
 	@sh components/mongodb.sh
@@ -73,7 +89,7 @@ mysql:			## Install MySQL Component
 	@sh components/mysql.sh
 
 shipping: common
-shipping:			## Install Shippinf Component
+shipping:			## Install Shipping Component
 	@sh components/shipping.sh
 
 rabbitmq: common
