@@ -32,10 +32,7 @@ GROUP_ID=$(id -g roboshop)
 sed -i -e "/^uid/ c uid=${USER_ID}" -e "/^gid/ c gid=${GROUP_ID}" /home/roboshop/payment/payment.ini
 
 Print "Update SystemD Script for Payment"
-CARTHOST=$(cart-ss.samdevops.tk)
-USERHOST=$(user-ss.samdevops.tk)
-AMQPHOST=$(rabbitmq-ss.samdevops.tk)
-sed -i -e "s/CARTHOST/${CARTHOST}" -e "s/USERHOST/${USERHOST}" -e "s/AMQPHOST/${AMQPHOST}"
+sed -i -e "s/CARTHOST/cart-ss.samdevops.tk" -e "s/USERHOST/user-ss.samdevops.tk" -e "s/AMQPHOST/rabbitmq-ss.samdevops.tk"
 Stat $?
 
 Print "mv /home/roboshop/payment/systemd.service /etc/systemd/system/payment.service && systemctl daemon-reload && systemctl enable payment && systemctl start payment"
