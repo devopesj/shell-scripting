@@ -23,7 +23,7 @@ Print "Start RabbitMQ" "systemctl enable rabbitmq-server && systemctl start rabb
 systemctl enable rabbitmq-server && systemctl start rabbitmq-server
 Stat $?
 
-Print "Creating Application User" "add_user roboshop and roboshop123"
+Print "Creating Application User" "rabbitmqctl add_user roboshop roboshop123 && rabbitmqctl set_user_tags roboshop administrator && rabbitmqctl set_permissions -p / roboshop"
 rabbitmqctl add_user roboshop roboshop123
 rabbitmqctl set_user_tags roboshop administrator && rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
 Stat $?
